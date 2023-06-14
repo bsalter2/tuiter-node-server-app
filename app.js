@@ -18,7 +18,7 @@ app.use(
 app.use(
     cors({
         credentials: true,
-        origin: "http://localhost:3000",
+        origin: ["http://localhost:3000", "https://a5--stalwart-phoenix-74ac4b.netlify.app"]
     })
 );
 
