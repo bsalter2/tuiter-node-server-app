@@ -1,5 +1,4 @@
 import * as tuitsDao from './tuits-dao.js'
-let tuits = posts;
 
 const TuitsController = (app) => {
     app.post('/api/tuits', createTuit);
