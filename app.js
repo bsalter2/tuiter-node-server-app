@@ -18,8 +18,8 @@ app.use(
 app.use(
     cors({
         credentials: true,
-        origin: ["http://localhost:3000", "https://a5--stalwart-phoenix-74ac4b.netlify.app"]
-        })
+        origin: "http://localhost:3000",
+    })
 );
 
 app.use(express.json())
