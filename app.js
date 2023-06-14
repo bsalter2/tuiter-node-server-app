@@ -6,6 +6,9 @@ import UserController from "./users/users-controller.js"
 import TuitsController from "./controllers/tuits/tuits-controller.js";
 import AuthController from "./users/auth-controller.js";
 import mongoose from "mongoose";
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const app = express()
 app.use(
@@ -31,7 +34,8 @@ AuthController(app);
 const port = process.env.PORT || 4000;
 app.listen(port)
 
-mongoose.connect("mongodb+srv://admin_test:password_test@cluster92221.4bbnaba.mongodb.net/tuiter?retryWrites=true&w=majority").then(
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
+mongoose.connect(CONNECTION_STRING).then(
     () => { 
        console.log("Connected to DB!");
    },
